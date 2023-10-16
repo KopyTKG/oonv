@@ -1,8 +1,10 @@
 import { debug, log } from "console";
+import { randomInt } from "crypto";
+
+// Custome
 import Cestujici from "./classes/cestujici.class";
 import Vlak from "./classes/vlak.class";
 import Pruvodci from "./classes/pruvodci.class";
-import { randomInt } from "crypto";
 import Jizdenka from "./classes/jizdenka.class";
 import Spolecnost from "./classes/spolecnost.class";
 
