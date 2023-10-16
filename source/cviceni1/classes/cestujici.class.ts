@@ -1,3 +1,4 @@
+import { Remove } from "../../tools/tools";
 import Clovek from "./clovek.class";
 
 class Cestujici extends Clovek {
@@ -29,11 +30,14 @@ class Cestujici extends Clovek {
         if(this.vlak === undefined) {
             return false;
         } else {
-            const index = this.vlak.Cestujici.indexOf(self, 0);
-            if (index > -1) {
-               myArray.splice(index, 1);
+            const index = this.vlak.Cestujici.indexOf(this, 0);
+            let tmp: Array<Cestujici> = []
+            if(index < -1) {
+                return false;
+            } else {
+                tmp = Remove(this, this.vlak.Cestujici);
             }
-            this.vlak.Cestujici;
+            this.vlak.Cestujici = tmp;
             this.vlak = undefined;
             return true;
         }
@@ -41,3 +45,5 @@ class Cestujici extends Clovek {
 }
 
 export default Cestujici;
+
+
