@@ -2,6 +2,7 @@ import { randomInt } from "crypto";
 import Cestujici from "./cestujici.class";
 import Clovek from "./clovek.class";
 import { log } from "console";
+import Spolecnost from "./spolecnost.class";
 
 class Pruvodci extends Clovek {
     private _exp : number = 50;
@@ -43,7 +44,11 @@ class Pruvodci extends Clovek {
         }
         let cerniPasazeri: any = []
         this.vlak.Cestujici.forEach((cestujici: Cestujici) => {
-            if(cestujici.Jizdenka != 0) {
+            if(
+                (cestujici.Jizdenka.Spolecnost != this.vlak.Spolecnost)
+                &&
+                (!this.vlak.Spolecnost.Smlouvy.includes(cestujici.Jizdenka.Spolecnost))
+                ) {
                 let rng = randomInt(0, 100);
                 if(rng < this.Zkusenosti) {
                     cerniPasazeri.push(cestujici);

@@ -1,17 +1,17 @@
 import { Remove } from "../../tools/tools";
 import Clovek from "./clovek.class";
+import Jizdenka from "./jizdenka.class";
 
 class Cestujici extends Clovek {
-    private _jizdenka?: Number;
-    constructor(jmeno: string) {
+    
+    private _jizdenka: Jizdenka;
+    constructor(jmeno: string, jizdenka: Jizdenka) {
         super(jmeno);
-    }
-
-    public set Jizdenka(jizdenka : Number) {
         this._jizdenka = jizdenka;
     }
-    public get Jizdenka(): Number {
-        return Number(this._jizdenka);
+
+    public get Jizdenka(): Jizdenka {
+        return this._jizdenka;
     }
     
     public Nastup(vlak:any): boolean {
