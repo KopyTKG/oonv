@@ -1,3 +1,4 @@
+import { randomInt } from "crypto";
 import { Remove } from "../../tools/tools";
 import Clovek from "./clovek.class";
 import Jizdenka from "./jizdenka.class";
@@ -5,11 +6,17 @@ import Jizdenka from "./jizdenka.class";
 class Cestujici extends Clovek {
     
     private _jizdenka: Jizdenka;
+
+    public Penize: number = randomInt(0, 2000);
+
     constructor(jmeno: string, jizdenka: Jizdenka) {
         super(jmeno);
         this._jizdenka = jizdenka;
     }
 
+    public set Jizdenka(jizdenka: Jizdenka) {
+        this._jizdenka = jizdenka;
+    }
     public get Jizdenka(): Jizdenka {
         return this._jizdenka;
     }

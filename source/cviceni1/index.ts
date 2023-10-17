@@ -31,15 +31,19 @@ function Cviceni1() {
     karel.Nastup(v1);
 
     for(let i = 0 ; i < 40; i++) {
-        const jizd = new Jizdenka(randomInt(100, 500), Spolecnosti[randomInt(0,Spolecnosti.length)])
+        const jizd = new Jizdenka(randomInt(100, 1000), Spolecnosti[randomInt(0,Spolecnosti.length)])
         let cestujici = new Cestujici("Cestujici" + i, jizd);
         cestujici.Nastup(v1);
-        debug(jizd)
     }
-    //debug(v1.Cestujici)
+    debug(v1.Cestujici.length)
+
     karel.Zkotroluj()
 
-    log(v1.Cestujici.length)
+    debug(v1.Cestujici.length)
+
+    karel.Zkotroluj()
+
+    debug(v1.Cestujici.length)
 
 }
 

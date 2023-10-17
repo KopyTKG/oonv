@@ -3,6 +3,7 @@ import Cestujici from "./cestujici.class";
 import Clovek from "./clovek.class";
 import { log } from "console";
 import Spolecnost from "./spolecnost.class";
+import Jizdenka from "./jizdenka.class";
 
 class Pruvodci extends Clovek {
     private _exp : number = 50;
@@ -51,7 +52,12 @@ class Pruvodci extends Clovek {
                 ) {
                 let rng = randomInt(0, 100);
                 if(rng < this.Zkusenosti) {
-                    cerniPasazeri.push(cestujici);
+                    if(cestujici.Penize > cestujici.Jizdenka.Cena * 3) {
+                        cestujici.Penize -= cestujici.Jizdenka.Cena*3;
+                        cestujici.Jizdenka = new Jizdenka(cestujici.Jizdenka.Cena*3, this.vlak.Spolecnost);
+                    } else {
+                        cerniPasazeri.push(cestujici);
+                    }
                 }
                 }
             }
