@@ -2,6 +2,34 @@
 </h1>
 
 
+<h2 align=center> Domácí cvičení 2
+</h2>
+
+<h3>
+    <ul>
+        <li>HW2.1 - Cestující</li>
+        <li>HW2.2 - Cestující vs. Průvodčí</li> 
+        <li>HW2.3 - Zkušení průvodčí</li> 
+        <li>HW2.4 - Přepravní společnost</li> 
+        <li>HW2.5 - Movitý cestující</li> 
+    </ul>
+</h3>
+
+
+<h4>
+    Status table
+</h4>
+<p>
+
+| Task  | Status             |
+| ----- | ------------------ |
+| HW2.1 | :x: |
+| HW2.2 | :x: |
+| HW2.3 | :x: |
+| HW2.4 | :x: |
+| HW2.5 | :x: |
+
+</p>
 
 <h2 align=center> Domácí cvičení 1
 </h2>
