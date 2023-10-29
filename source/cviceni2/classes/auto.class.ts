@@ -11,6 +11,12 @@ class Auto implements IPojozdne, IZaparkovatelne {
         this._parkoviste = parkoviste;
         return "Zaparkovano na "+ parkoviste
     }
+    /**
+     * Remove the current instance from the parkoviste array and set the _parkoviste property to undefined.
+     *
+     * @param {type} paramName - description of parameter
+     * @return {type} description of return value
+     */
     vyjet(){
         let index = this._parkoviste.Parkoviste.indexOf(this);
         Remove(this, this._parkoviste.Parkoviste);
