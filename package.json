@@ -6,13 +6,20 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon source/server.ts",
-    "build": "rm -rf build/ && cd source/ && tsc"
+    "build": "rm -rf build/ && cd source/ && tsc",
+    "lint": "eslint ./**/*.ts",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
   },
   "author": "KopyTKG",
   "license": "AGPL-3.0",
   "devDependencies": {
     "@types/node": "^20.8.6",
+    "eslint": "^8.54.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.1",
     "nodemon": "^3.0.1",
+    "prettier": "^3.1.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2"
   }
